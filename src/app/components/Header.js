@@ -23,7 +23,15 @@ const Header = () => {
     };
   }, []);
   console.log(header);
-  return <div>Header</div>;
+  return (
+    <div
+      className={`${
+        header ? "bg-white shadow-md py-2" : "bg-transparent shadow-none py-4"
+      } w-full fixed max-w-[1920px] mx-auto z-20 transition-all duration-300`}
+    >
+      <div className="xl:container mx-auto flex flex-col">Header</div>
+    </div>
+  );
 };
 
 export default Header;
